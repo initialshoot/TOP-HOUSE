@@ -1,0 +1,38 @@
+ion-title {
+    padding-top: 30px;
+    text-align: center;
+    font-size: 3.8rem;
+    color: #148289;
+}
+
+img {
+    width: 80%;
+    height: 350px;
+    border-radius: 50%;
+    border: #148289 solid 3px;
+}
+
+.cont {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h3 {
+    padding-top: 20px;
+    text-align: center;
+    font-size: 4rem;
+    color: #0DDEEC;
+}
+
+button {
+    margin-top: 70px;
+    width: 140px;
+    height: 60px;
+    background-color: #FFFFFF;
+    color: #000000;
+    font-size: 2rem;
+    border: #148289 solid 4px;
+}

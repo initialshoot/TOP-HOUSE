@@ -1,0 +1,35 @@
+<ion-header>
+    <ion-toolbar style="background-color: #0F0D0D;">
+        <ion-buttons slot="start">
+            <ion-button [routerLink]="[ '/' ]">
+                <ion-icon name="arrow-back"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="cont">
+        <ion-item>
+            <ion-label position="floating">Correo</ion-label>
+            <ion-input type="mail" name="mail" id="mail" required></ion-input>
+        </ion-item>
+        <br><br><br>
+        <ion-item>
+            <ion-label position="floating">Contraseña</ion-label>
+            <div class="password">
+                <ion-input type="password" name="password" id="password" required></ion-input>
+                <ion-icon name="eye" onclick="mostrarContrasena()"></ion-icon>
+            </div>
+        </ion-item>
+        <br>
+        <button type="submit" [routerLink]="[ '/folder/:id' ]">Continuar</button>
+    </div>
+
+</ion-content>
+
+<ion-footer class="ion-no-border">
+
+    <p><u>TOP-HOUSE</u></p>
+
+</ion-footer>

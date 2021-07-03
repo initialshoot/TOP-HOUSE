@@ -1,0 +1,32 @@
+<ion-header>
+    <ion-toolbar style="background-color: #0F0D0D;">
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="maincont">
+        <div class="saludo">
+            <h1>Hola Condomino Omar</h1>
+            <img src="../../assets/img/icon.png" alt="logo">
+        </div>
+        <br>
+        <div class="acciones">
+            <h3>Agregar Invitado</h3>
+            <button>Agregar</button>
+            <h3>Revisar Adeudo</h3>
+            <button [routerLink]="['/con-cuotas']">Ver</button>
+        </div>
+    </div>
+
+
+</ion-content>
+
+<ion-footer class="ion-no-border">
+
+    <p><u>TOP-HOUSE</u></p>
+
+</ion-footer>
