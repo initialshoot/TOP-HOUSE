@@ -52,7 +52,7 @@ button {
     align-items: center;
 }
 
-img {
+img:first-child {
     width: 40%;
     height: 150px;
     border-radius: 35%;
@@ -76,7 +76,7 @@ button {
 }
 
 div.acciones {
-    padding-top: 20px;
+    text-align: center;
 }
 
 h1 {

@@ -1,6 +1,6 @@
 <ion-header>
     <ion-toolbar style="background-color: #0F0D0D;">
-        <ion-buttons slot="start">
+        <ion-buttons slot="end">
             <ion-menu-button></ion-menu-button>
         </ion-buttons>
 
@@ -16,7 +16,7 @@
         <br>
         <div class="acciones">
             <h3>Agregar Invitado</h3>
-            <button>Agregar</button>
+            <button [routerLink]="['/con-visitas']">Agregar</button>
             <h3>Revisar Adeudo</h3>
             <button [routerLink]="['/con-cuotas']">Ver</button>
         </div>

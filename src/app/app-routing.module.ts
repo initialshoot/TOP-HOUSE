@@ -20,10 +20,6 @@ const routes: Routes = [
     loadChildren: () => import('./Pages/login/login.module').then( m => m.LoginPageModule)
   },
   {
-    path: 'con-home',
-    loadChildren: () => import('./Pages/con-home/con-home.module').then( m => m.ConHomePageModule)
-  },
-  {
     path: 'admin-home',
     loadChildren: () => import('./Pages/admin-home/admin-home.module').then( m => m.AdminHomePageModule)
   },
@@ -34,7 +30,24 @@ const routes: Routes = [
   {
     path: 'con-cuotas',
     loadChildren: () => import('./Pages/con-cuotas/con-cuotas.module').then( m => m.ConCuotasPageModule)
+  },
+  {
+    path: 'con-visitas',
+    loadChildren: () => import('./Pages/con-visitas/con-visitas.module').then( m => m.ConVisitasPageModule)
+  },
+  {
+    path: 'avisos',
+    loadChildren: () => import('./Pages/avisos/avisos.module').then( m => m.AvisosPageModule)
+  },
+  {
+    path: 'notificaciones',
+    loadChildren: () => import('./Pages/notificaciones/notificaciones.module').then( m => m.NotificacionesPageModule)
+  },
+  {
+    path: 'usuarios',
+    loadChildren: () => import('./Pages/usuarios/usuarios.module').then( m => m.UsuariosPageModule)
   }
+
 ];
 
 @NgModule({

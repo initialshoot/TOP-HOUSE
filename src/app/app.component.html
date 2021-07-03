@@ -1,6 +1,6 @@
 <ion-app>
     <ion-split-pane contentId="main-content">
-        <ion-menu contentId="main-content" type="overlay">
+        <ion-menu side="end" contentId="main-content" type="overlay">
             <ion-content>
                 <ion-list id="inbox-list">
                     <ion-list-header>Menu</ion-list-header>
@@ -16,7 +16,7 @@
 
                 <ion-list id="labels-list">
                     <ion-item *ngFor="let label of labels" lines="none">
-                        <button [routerLink]="['/portada']" lines="none" detail="false" routerLinkActive="selected">{{ label }}</button>
+                        <button (click)="cerrarMenu()" lines="none" detail="false" routerLinkActive="selected">{{ label }}</button>
                     </ion-item>
                 </ion-list>
             </ion-content>

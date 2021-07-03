@@ -1,5 +1,10 @@
 <ion-header>
     <ion-toolbar style="background-color: #0F0D0D;">
+        <ion-buttons slot="start">
+            <ion-button [routerLink]="[ '/folder/:id' ]">
+                <ion-icon name="arrow-back"></ion-icon>
+            </ion-button>
+        </ion-buttons>
         <ion-buttons slot="end">
             <ion-menu-button></ion-menu-button>
         </ion-buttons>
@@ -10,15 +15,13 @@
 <ion-content>
     <div class="maincont">
         <div class="saludo">
-            <h1>Hola Administrador Martin</h1>
-            <img src="../../assets/img/icon.png" alt="logo">
+
+            <img src="../../assets/img/usuario.jpg" alt="logo">
+            <h1>Usuarios</h1>
         </div>
         <br>
         <div class="acciones">
-            <h3>Agregar Usuario</h3>
-            <button>Agregar</button>
-            <h3>Crear evento</h3>
-            <button>Crear</button>
+
         </div>
     </div>
 

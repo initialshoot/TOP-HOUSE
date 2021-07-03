@@ -25,8 +25,8 @@ ion-buttons {
 }
 
 ion-item {
-    width: 251px;
     font-size: 1.8rem;
+    padding: 5%;
 }
 
 ion-label {
@@ -34,7 +34,7 @@ ion-label {
 }
 
 button {
-    margin-top: 70px;
+    margin-bottom: 15%;
     width: 124px;
     height: 48px;
     background-color: #020202;
@@ -52,7 +52,7 @@ button {
     align-items: center;
 }
 
-img {
+img:first-child {
     width: 40%;
     height: 150px;
     border-radius: 35%;
@@ -80,22 +80,32 @@ div.acciones {
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 h3 {
-    font-size: 2rem;
-    padding-top: 40px;
+    font-size: 1.6rem;
+    padding-top: 8px;
+    padding-right: 10px;
 }
 
 ion-item {
     width: auto;
 }
 
-a {
-    color: rgb(14, 196, 14);
+img.doc {
+    width: 40%;
+    height: 150px;
+    border-radius: 35%;
+    border: #148289 solid 2px;
 }
 
-a.pendiente {
-    color: crimson;
+ion-card {
+    padding: 5%;
+}
+
+ion-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }

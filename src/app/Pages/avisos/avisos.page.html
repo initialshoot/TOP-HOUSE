@@ -1,0 +1,49 @@
+<ion-header>
+    <ion-toolbar style="background-color: #0F0D0D;">
+        <ion-buttons slot="start">
+            <ion-button [routerLink]="[ '/folder/:id' ]">
+                <ion-icon name="arrow-back"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-buttons slot="end">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="maincont">
+        <div class="saludo">
+
+            <img src="../../assets/img/avisos.jpg" alt="logo">
+            <h1>Avisos</h1>
+        </div>
+        <br>
+        <div class="acciones">
+            <ion-list>
+                <ion-item>
+                    <h3>Reporte de Gastos</h3>
+                    <img class="doc" src="../../assets/img/excel.png" alt="excel">
+                </ion-item>
+                <ion-item>
+                    <h3>Nuevos Proyectos</h3>
+                    <img class="doc" src="../../assets/img/powerpoint.png" alt="excel">
+                </ion-item>
+                <ion-item>
+                    <h3>Comunicado Condominos</h3>
+                    <img class="doc" src="../../assets/img/word.png" alt="excel">
+                </ion-item>
+            </ion-list>
+
+        </div>
+    </div>
+
+
+</ion-content>
+
+<ion-footer class="ion-no-border">
+
+    <p><u>TOP-HOUSE</u></p>
+
+</ion-footer>

@@ -1,0 +1,43 @@
+<ion-header>
+    <ion-toolbar style="background-color: #0F0D0D;">
+        <ion-buttons slot="start">
+            <ion-button [routerLink]="[ '/folder/:id' ]">
+                <ion-icon name="arrow-back"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-buttons slot="end">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="maincont">
+        <div class="saludo">
+
+            <img src="../../assets/img/notificaciones.jpg" alt="logo">
+            <h1>Notificaciones</h1>
+        </div>
+        <br>
+        <div class="acciones">
+            <ion-card>
+                <ion-card-header>
+                    <div>
+                        <ion-card-title>Nueva Visita Registrada</ion-card-title>
+                        <ion-card-subtitle>28/06/2021</ion-card-subtitle>
+                    </div>
+                    <button><ion-icon name="eye-outline"></ion-icon></button>
+                </ion-card-header>
+            </ion-card>
+        </div>
+    </div>
+
+
+</ion-content>
+
+<ion-footer class="ion-no-border">
+
+    <p><u>TOP-HOUSE</u></p>
+
+</ion-footer>

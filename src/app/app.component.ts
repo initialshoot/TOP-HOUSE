@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { MenuController } from '@ionic/angular';
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -6,14 +9,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public appPages = [
-    { title: 'Cuotas', url: '/folder/cuotas', icon: 'wallet' },
-    { title: 'Avisos', url: '/folder/avisos', icon: 'alert-circle' },
-    { title: 'Notificaciones', url: '/folder/notificaciones', icon: 'notifications' },
-    { title: 'Usuarios', url: '/folder/usuarios', icon: 'people' },
+    { title: 'Cuotas', url: '/con-cuotas', icon: 'wallet' },
+    { title: 'Visitas', url: '/con-visitas', icon: 'man' },
+    { title: 'Avisos', url: '/avisos', icon: 'alert-circle' },
+    { title: 'Notificaciones', url: '/notificaciones', icon: 'notifications' },
+    { title: 'Usuarios', url: '/usuarios', icon: 'people' },
     { title: 'Registros', url: '/folder/registros', icon: 'clipboard' },
-    { title: 'Camaras', url: '/folder/camaras', icon: 'videocam' },
-    { title: 'Visitas', url: '/folder/visitas', icon: 'man' }
+    { title: 'Camaras', url: '/folder/camaras', icon: 'videocam' }
   ];
   public labels = ['Logout'];
-  constructor() {}
+  constructor(public router: Router, private menu: MenuController) {}
+
+  cerrarMenu() {
+    console.log("Sesion Cerrada");
+    this.menu.close();
+    this.menu.enable(false);
+    this.router.navigate(['/portada']);
+  }
 }

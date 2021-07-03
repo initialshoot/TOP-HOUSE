@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-portada',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PortadaPage implements OnInit {
 
-  constructor() { }
+  constructor(public menu: MenuController) {
+
+  this.menu.enable(false);
+
+   }
+
 
   ngOnInit() {
   }
