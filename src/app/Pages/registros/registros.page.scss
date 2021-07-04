@@ -28,6 +28,7 @@ ion-buttons {
 ion-item {
     font-size: 1.8rem;
     padding: 5%;
+    height: auto;
 }
 
 ion-label {
@@ -35,7 +36,7 @@ ion-label {
 }
 
 button {
-    margin-bottom: 15%;
+    margin-top: 70px;
     width: 124px;
     height: 48px;
     background-color: #020202;
@@ -77,11 +78,11 @@ button {
 }
 
 div.acciones {
-    padding-top: 20px;
+    text-align: center;
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 h3 {
@@ -94,19 +95,14 @@ ion-item {
     width: auto;
 }
 
-img.doc {
+img {
     width: 40%;
     height: 150px;
-    border-radius: 35%;
+    border-radius: 20%;
     border: #148289 solid 2px;
 }
 
-ion-card {
-    padding: 5%;
-}
-
-ion-card-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+h2 {
+    text-align: center;
+    font-size: 2rem;
 }
