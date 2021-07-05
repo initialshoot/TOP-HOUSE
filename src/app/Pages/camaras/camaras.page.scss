@@ -1,0 +1,97 @@
+ion-menu-button {
+    font-size: 2.5rem;
+}
+
+ion-icon {
+    font-size: 2rem;
+}
+
+ion-buttons {
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+.cont {
+    padding-top: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.password {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+ion-item {
+    font-size: 1.8rem;
+    padding: 5%;
+    height: auto;
+}
+
+ion-label {
+    font-size: 1.5rem !important;
+}
+
+.saludo {
+    padding-top: 8%;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+img:first-child {
+    width: 40%;
+    height: 150px;
+    border-radius: 35%;
+    border: #148289 solid 2px;
+    box-shadow: #148289 0px 3px 5px;
+}
+
+.maincont {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    margin-top: 40px;
+    width: 124px;
+    height: 48px;
+    background-color: #020202;
+    color: #FFFFFF;
+    font-size: 18px;
+    border: #148289 solid 4px;
+}
+
+div.acciones {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+    padding-top: 8px;
+    padding-right: 10px;
+}
+
+ion-item {
+    width: auto;
+}
+
+img {
+    width: 50%;
+    height: 200px;
+    border: #148289 solid 2px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+}

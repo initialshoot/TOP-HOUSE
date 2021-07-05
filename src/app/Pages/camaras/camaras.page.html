@@ -1,9 +1,53 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>camaras</ion-title>
-  </ion-toolbar>
+    <ion-toolbar style="background-color: #0F0D0D;">
+        <ion-buttons slot="start">
+            <ion-button [routerLink]="[ '/folder/:id' ]">
+                <ion-icon name="arrow-back"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-buttons slot="end">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
+    <div class="maincont">
+        <div class="saludo">
+            <img src="../../assets/img/registro.jpg" alt="logo">
+            <h1>Camaras</h1>
+        </div>
+        <br><br>
+        <div class="acciones">
+            <ion-list>
+                <ion-item>
+                    <ion-label>Camara 1</ion-label>
+                    <img src="../../assets/img/camara1.png" alt="QR">
+                </ion-item>
+                <br>
+                <ion-item>
+                    <ion-label>Camara 2</ion-label>
+                    <img src="../../assets/img/camara2.png" alt="QR">
+                </ion-item>
+                <br>
+                <ion-item>
+                    <ion-label>Camara 3</ion-label>
+                    <img src="../../assets/img/camara3.png" alt="QR">
+                </ion-item>
+                <br>
+                <ion-item>
+                    <ion-label>Camara 4</ion-label>
+                    <img src="../../assets/img/camara4.png" alt="QR">
+                </ion-item>
+            </ion-list>
+        </div>
+    </div>
 
 </ion-content>
+
+<ion-footer class="ion-no-border">
+
+    <p><u>TOP-HOUSE</u></p>
+
+</ion-footer>

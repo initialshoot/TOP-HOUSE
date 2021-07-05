@@ -14,8 +14,8 @@ export class AppComponent {
     { title: 'Avisos', url: '/avisos', icon: 'alert-circle' },
     { title: 'Notificaciones', url: '/notificaciones', icon: 'notifications' },
     { title: 'Usuarios', url: '/usuarios', icon: 'people' },
-    { title: 'Registros', url: '/folder/registros', icon: 'clipboard' },
-    { title: 'Camaras', url: '/folder/camaras', icon: 'videocam' }
+    { title: 'Registros', url: '/registros', icon: 'clipboard' },
+    { title: 'Camaras', url: '/camaras', icon: 'videocam' }
   ];
   public labels = ['Logout'];
   constructor(public router: Router, private menu: MenuController) {}
