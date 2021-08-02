@@ -53,6 +53,14 @@ const routes: Routes = [
   {
     path: 'camaras',
     loadChildren: () => import('./Pages/camaras/camaras.module').then( m => m.CamarasPageModule)
+  },
+  {
+    path: 'admin',
+    loadChildren: () => import('./Pages/admin/admin.module').then( m => m.AdminPageModule)
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('./Pages/register/register.module').then( m => m.RegisterPageModule)
   }
 
 

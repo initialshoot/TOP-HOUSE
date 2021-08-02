@@ -1,0 +1,44 @@
+ion-icon {
+    font-size: 2.5rem;
+}
+
+ion-buttons {
+    padding-left: 5%;
+}
+
+ion-menu-button {
+    font-size: 2.5rem;
+}
+
+.cont {
+    padding-top: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.password {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+ion-item {
+    width: 75%;
+    font-size: 1.5rem;
+}
+
+ion-label {
+    font-size: 18px !important;
+}
+
+button {
+    margin-top: 70px;
+    width: 124px;
+    height: 48px;
+    background-color: #020202;
+    color: #FFFFFF;
+    font-size: 18px;
+    border: #148289 solid 4px;
+}
