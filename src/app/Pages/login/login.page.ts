@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router, RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 import { MenuController } from '@ionic/angular';
 import { AuthService } from '../../services/auth.service';
 
@@ -10,7 +10,7 @@ import { AuthService } from '../../services/auth.service';
 })
 export class LoginPage implements OnInit {
 
-  constructor(public menu: MenuController, private authSvc:AuthService, public ruta: Router) { 
+  constructor(public menu: MenuController, private authSvc:AuthService, public router: Router) { 
 
     this.menu.enable(false);
 
@@ -23,8 +23,7 @@ export class LoginPage implements OnInit {
       const user = await this.authSvc.login(email.value, password.value);
       if(user) {
         const isVerified = this.authSvc.isEmailVerified(user);
-        console.log('Verified: ', isVerified);
-        this.ruta.navigate(['/folder/:id']);
+        this.redirectUser(isVerified);
       }
     } catch(error) {
       console.log('Error: ', error);
@@ -36,12 +35,21 @@ export class LoginPage implements OnInit {
     try {
       const user = await this.authSvc.loginGoogle();
       if(user) {
-        //To do: Checkemail
-        console.log('User: ', user);
+       const isVerified = this.authSvc.isEmailVerified(user);
+        this.redirectUser(isVerified);
       }
     } catch(error) {
       console.log('Error: ', error);
     }
   }
 */
+
+  private redirectUser(isVerified: boolean): void {
+    if (isVerified) {
+      this.router.navigate(['/folder'])
+    } else {
+      this.router.navigate(['/verificacion'])
+    }
+  }
+
 }

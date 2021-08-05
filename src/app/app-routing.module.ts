@@ -8,7 +8,7 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'folder/:id',
+    path: 'folder',
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
   },
   {
@@ -62,7 +62,16 @@ const routes: Routes = [
   {
     path: 'registrar-usuario',
     loadChildren: () => import('./Pages/register/register.module').then( m => m.RegisterPageModule)
+  },
+  {
+    path: 'verificacion',
+    loadChildren: () => import('./Pages/verificacion/verificacion.module').then( m => m.VerificacionPageModule)
+  },
+  {
+    path: 'reset-psw',
+    loadChildren: () => import('./Pages/reset-psw/reset-psw.module').then( m => m.ResetPswPageModule)
   }
+
 
 
 ];

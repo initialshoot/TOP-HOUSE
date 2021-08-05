@@ -1,0 +1,35 @@
+<ion-header>
+    <ion-toolbar style="background-color: #0F0D0D;">
+        <ion-buttons slot="start">
+            <ion-button [routerLink]="[ '/login' ]">
+                <ion-icon name="arrow-back"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+
+
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="cont">
+        <div class="titulo">
+            <h1>Restablecer Contraseña</h1>
+        </div>
+        <h3>Enviar correo de Restablecimiento</h3>
+        <br>
+        <ion-item>
+            <ion-label position="floating">Correo</ion-label>
+            <ion-input type="mail" name="mail" id="email" #email required></ion-input>
+        </ion-item>
+
+        <button type="submit" (click)="onResetPsw(email)">Enviar</button>
+    </div>
+
+
+</ion-content>
+
+<ion-footer class="ion-no-border">
+
+    <p><u>TOP-HOUSE</u></p>
+
+</ion-footer>

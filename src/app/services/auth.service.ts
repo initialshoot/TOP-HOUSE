@@ -33,9 +33,32 @@ export class AuthService {
 //Metodo para resetear la contraseña
   async resetPassword(email: string): Promise<void> {
     try {
+      const alert = await this.alerta.create({
+        cssClass: 'my-custom-class',
+        header: 'TOP-House',
+        message: 'Se envio su link de reseteo al correo ingresado',
+        buttons: ['OK']
+        });
+  
+        await alert.present();
+    
+        const { role } = await alert.onDidDismiss();
+
       return this.afAuth.sendPasswordResetEmail(email);
+
     } catch (error) {
       console.log('Error: ', error);
+
+        const alert = await this.alerta.create({
+        cssClass: 'my-custom-class',
+        header: 'TOP-House',
+        message: error.message,
+        buttons: ['OK']
+        });
+  
+        await alert.present();
+    
+        const { role } = await alert.onDidDismiss();
     }
   }
 
@@ -47,6 +70,7 @@ export class AuthService {
       return user;
     } catch (error) {
       console.log('Error', error);
+
       const alert = await this.alerta.create({
         cssClass: 'my-custom-class',
         header: 'TOP-House',
