@@ -46,7 +46,8 @@ const routes: Routes = [
   {
     path: 'usuarios',
     loadChildren: () => import('./Pages/usuarios/usuarios.module').then( m => m.UsuariosPageModule)
-  },  {
+  },
+  {
     path: 'registros',
     loadChildren: () => import('./Pages/registros/registros.module').then( m => m.RegistrosPageModule)
   },
@@ -59,7 +60,7 @@ const routes: Routes = [
     loadChildren: () => import('./Pages/admin/admin.module').then( m => m.AdminPageModule)
   },
   {
-    path: 'register',
+    path: 'registrar-usuario',
     loadChildren: () => import('./Pages/register/register.module').then( m => m.RegisterPageModule)
   }
 

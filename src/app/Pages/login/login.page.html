@@ -12,20 +12,31 @@
     <div class="cont">
         <ion-item>
             <ion-label position="floating">Correo</ion-label>
-            <ion-input type="mail" name="mail" id="mail" required></ion-input>
+            <ion-input type="mail" name="mail" id="email" #email required></ion-input>
         </ion-item>
         <br><br><br>
         <ion-item>
             <ion-label position="floating">Contraseña</ion-label>
             <div class="password">
-                <ion-input type="password" name="password" id="password" required></ion-input>
+                <ion-input type="password" name="password" id="password" #password required></ion-input>
                 <ion-icon name="eye" onclick="mostrarContrasena()"></ion-icon>
             </div>
         </ion-item>
         <br>
-        <button type="submit" [routerLink]="[ '/folder/:id' ]">Continuar</button>
+        <button type="submit" (click)="onLogin(email, password)">Continuar</button>
     </div>
+    <!-- <br>
+      Opción para habilitar el inicio de sesión 
+            con uso de una cuenta de Google
+    <div class="google">
+        <div class="googleBox">
+            <button expand="block" type="submit" (click)="onLoginGoogle(email, password)">Iniciar sesión con Google</button>
+            <ion-icon name="logo-google"></ion-icon>
+        </div>
 
+
+    </div>
+-->
 </ion-content>
 
 <ion-footer class="ion-no-border">

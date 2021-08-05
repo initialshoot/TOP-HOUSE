@@ -16,6 +16,7 @@ export class RegisterPage implements OnInit {
     try{
       const user = await this.authSvc.register(email.value, password.value);
       if (user) {
+        //To do: CheckEmail
         console.log('User: ', user);
       }
     } catch (error) {

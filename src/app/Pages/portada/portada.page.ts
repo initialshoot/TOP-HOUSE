@@ -9,13 +9,10 @@ import { MenuController } from '@ionic/angular';
 export class PortadaPage implements OnInit {
 
   constructor(public menu: MenuController) {
-
   this.menu.enable(false);
-
-   }
-
-
-  ngOnInit() {
   }
+
+
+  ngOnInit() {}
 
 }

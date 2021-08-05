@@ -25,5 +25,6 @@ export class AppComponent {
     this.menu.close();
     this.menu.enable(false);
     this.router.navigate(['/portada']);
+    
   }
 }

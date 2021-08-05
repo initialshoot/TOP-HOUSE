@@ -1,7 +1,7 @@
 <ion-header>
     <ion-toolbar style="background-color: #0F0D0D;">
         <ion-buttons slot="start">
-            <ion-button [routerLink]="[ '/folder/:id' ]">
+            <ion-button [routerLink]="[ '/admin-home' ]">
                 <ion-icon name="arrow-back"></ion-icon>
             </ion-button>
         </ion-buttons>
@@ -14,6 +14,10 @@
 
 <ion-content>
     <div class="cont">
+        <div class="titulo">
+            <h1>Registrar Nuevo Usuario</h1>
+        </div>
+
         <ion-item>
             <ion-label position="floating">Correo</ion-label>
             <ion-input type="text" name="mail" id="mail" #email required></ion-input>
@@ -27,7 +31,7 @@
             </div>
         </ion-item>
         <br>
-        <button type="submit" (click)="onRegister(email, password)" [routerLink]="[ '/folder/:id' ]">Registrar</button>
+        <button type="submit" (click)="onRegister(email, password)">Registrar</button>
 
     </div>
 

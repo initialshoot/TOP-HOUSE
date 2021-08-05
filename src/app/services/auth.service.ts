@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { User } from '../shared/user.interface';
 import { AngularFireAuth } from "@angular/fire/auth";
-import firebase from "firebase/app";
+import * as firebase from 'firebase/app';
 import { AlertController } from '@ionic/angular';
 
 import { AngularFirestore, AngularFirestoreDocument } from "@angular/fire/firestore";
@@ -42,11 +42,22 @@ export class AuthService {
   //Metodo login con Google
   async loginGoogle(): Promise<User> {
     try {
-      const { user } = await this.afAuth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+      const { user } = await this.afAuth.signInWithPopup(new firebase.default.auth.GoogleAuthProvider());
       this.updateUserData(user);
       return user;
     } catch (error) {
       console.log('Error', error);
+      const alert = await this.alerta.create({
+        cssClass: 'my-custom-class',
+        header: 'TOP-House',
+        message: error.message,
+        buttons: ['OK']
+      });
+  
+      await alert.present();
+  
+      const { role } = await alert.onDidDismiss();
+
     }
    }
   
@@ -55,7 +66,20 @@ export class AuthService {
     try{
       const { user } = await this.afAuth.createUserWithEmailAndPassword(email, password);
       await this.sendVerificationEmail();
+      
+      const alert = await this.alerta.create({
+        cssClass: 'my-custom-class',
+        header: 'TOP-House',
+        message: 'Se registro el usuario de manera correcta.',
+        buttons: ['OK']
+      });
+  
+      await alert.present();
+  
+      const { role } = await alert.onDidDismiss();
+
       return user;
+
     } catch (error) {
       console.log('Error: ', error);
       const alert = await this.alerta.create({
@@ -81,6 +105,17 @@ export class AuthService {
       return user;
     }catch (error) {
       console.log('Error: ', error );
+      const alert = await this.alerta.create({
+        cssClass: 'my-custom-class',
+        header: 'TOP-House',
+        message: error.message,
+        buttons: ['OK']
+      });
+  
+      await alert.present();
+  
+      const { role } = await alert.onDidDismiss();
+
     }
   }  
   
@@ -92,6 +127,11 @@ export class AuthService {
       console.log('Error: ', error);
     }
   }
+
+  //
+  isEmailVerified(user: User):boolean {
+    return user.emailVerified == true ? true : false;
+  }
   
   // Metodo log-out
   async logout(): Promise<void> {
@@ -102,8 +142,9 @@ export class AuthService {
     }
   }
 
-//Metodo Actualizar datos del usuario
 
+
+//Metodo Actualizar datos del usuario
 private updateUserData(user: User){
   const userRef:AngularFirestoreDocument<User> = this.afs.doc(`users/${user.uid}`);
   const data:User = {
