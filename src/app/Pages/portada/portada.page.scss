@@ -2,6 +2,7 @@ u {
     text-align: center;
     font-size: 3.8rem;
     color: #148289;
+    text-shadow: #000000 10px 3px 5px;
 }
 
 img {
@@ -9,6 +10,7 @@ img {
     height: 350px;
     border-radius: 50%;
     border: #148289 solid 3px;
+    box-shadow: 10px 10px 5px #000000;
 }
 
 .cont {
@@ -30,8 +32,8 @@ button {
     margin-top: 70px;
     width: 140px;
     height: 60px;
-    background-color: #FFFFFF;
-    color: #000000;
+    background-color: #000000;
+    color: #FFFFFF;
     font-size: 2rem;
     border: #148289 solid 4px;
 }

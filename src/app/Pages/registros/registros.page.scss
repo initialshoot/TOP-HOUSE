@@ -27,8 +27,9 @@ ion-buttons {
 
 ion-item {
     font-size: 1.8rem;
-    padding: 10%;
+    padding: 3%;
     height: auto;
+    box-shadow: none;
 }
 
 ion-label {
@@ -49,7 +50,6 @@ img:first-child {
     height: 150px;
     border-radius: 35%;
     border: #148289 solid 2px;
-    box-shadow: #148289 0px 3px 5px;
 }
 
 .maincont {
@@ -57,18 +57,14 @@ img:first-child {
     flex-direction: column;
 }
 
-button {
-    margin-top: 40px;
-    width: 124px;
-    height: 48px;
-    background-color: #020202;
-    color: #FFFFFF;
-    font-size: 18px;
-    border: #148289 solid 4px;
-}
-
 div.acciones {
+    padding-bottom: 10%;
+    padding-top: 10%;
     text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 h1 {
@@ -81,10 +77,6 @@ h3 {
     padding-right: 10px;
 }
 
-ion-item {
-    width: auto;
-}
-
 img {
     width: 40%;
     height: 150px;
@@ -95,4 +87,11 @@ img {
 h2 {
     text-align: center;
     font-size: 2rem;
+}
+
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
 }

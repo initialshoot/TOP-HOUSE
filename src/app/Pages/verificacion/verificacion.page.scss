@@ -6,10 +6,6 @@ ion-buttons {
     padding-left: 5%;
 }
 
-ion-menu-button {
-    font-size: 2.5rem;
-}
-
 .cont {
     padding-top: 20%;
     display: flex;
@@ -19,7 +15,7 @@ ion-menu-button {
 }
 
 .titulo {
-    padding-bottom: 20%;
+    padding-bottom: 8%;
 }
 
 .password {
@@ -45,4 +41,14 @@ button {
     color: #FFFFFF;
     font-size: 18px;
     border: #148289 solid 4px;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+p.msg {
+    padding: 10%;
+    font-size: 1.2rem;
+    text-align: center;
 }
